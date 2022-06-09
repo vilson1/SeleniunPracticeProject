@@ -131,14 +131,14 @@ public class day10_Practice {
         WebElement cydeo=Driver.getDriver().findElement(By.xpath("//div[text()='Powered by ']"));
 
 
-        actions.sendKeys(Keys.PAGE_DOWN).moveToElement(cydeo).perform();
+        actions.moveToElement(cydeo).perform();
 //        4- Scroll using Actions class “moveTo(element)” method
 
 //        1- Continue from where the Task 4 is left in the same test.
         WebElement home=Driver.getDriver().findElement(By.xpath("//a[text()='Home']"));
 //        2- Scroll back up to “Home” link using PageUP button
         BrowserUtils.sleep(2);
-        actions.sendKeys(Keys.PAGE_UP).moveToElement(home).perform();
+        actions.sendKeys(Keys.PAGE_UP).perform();
     }
 
     @Test
@@ -174,11 +174,11 @@ public class day10_Practice {
         WebElement cydeo=Driver.getDriver().findElement(By.xpath("//div[text()='Powered by ']"));
         WebElement homeLink=Driver.getDriver().findElement(By.xpath("//a[text()='Home']"));
         BrowserUtils.sleep(2);
-        js.executeScript("arguments[0].scrollIntoView(true);", cydeo);
+        js.executeScript("arguments[0].scrollIntoView(true);", cydeo,homeLink);
 
 
         BrowserUtils.sleep(2);
-        js.executeScript("arguments[0].scrollIntoView(true)",homeLink);
+        js.executeScript("arguments[1].scrollIntoView(true)",cydeo,homeLink);
 //        4- Scroll up to “Home” link
 //        5- Use below provided JS method only
 //
