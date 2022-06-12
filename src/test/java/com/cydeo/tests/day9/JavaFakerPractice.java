@@ -15,7 +15,7 @@ public class JavaFakerPractice  {
 
         System.out.println("faker.numerify(\"####-###-#########\") = " + faker.numerify("####-###-#########"));
 
-        System.out.println("faker.letterify(\"##-####-##\") = " + faker.letterify("??-????-??"));
+        System.out.println("faker.letterify(\"??-????-??\") = " + faker.letterify("??-????-??"));
 
         System.out.println("faker.bothify(\"????###???##?\") = " + faker.bothify("????###???##?"));
 
