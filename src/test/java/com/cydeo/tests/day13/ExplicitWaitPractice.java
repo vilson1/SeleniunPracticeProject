@@ -56,9 +56,11 @@ public class ExplicitWaitPractice {
         Assert.assertTrue(!dynamicControlsPage.waitingBar.isDisplayed());
 //        5- Verify:
 //        a. Input box is enabled.
-        Assert.assertTrue(dynamicControlsPage.inputBox.isDisplayed());
+        Assert.assertTrue(dynamicControlsPage.inputBox.isEnabled());
 //        b. “It’s enabled!” message is displayed.
         Assert.assertTrue(dynamicControlsPage.enambleMessage.isDisplayed());
+        System.out.println("dynamicControlsPage.enambleMessage = " + dynamicControlsPage.enambleMessage.getText());
+        Assert.assertTrue(dynamicControlsPage.enambleMessage.getText().equals("It’s enabled!"));
 //
 //                NOTE: FOLLOW POM
     }
